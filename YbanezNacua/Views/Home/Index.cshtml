@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="Apartment" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Nacua-Ybañez Apartment</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/customize-css.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/blueimp-gallery.min.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap-image-gallery.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/modal.css")" rel="stylesheet">
+</head>
+<body>
+    @* -------header-------*@   
+    <div ng-include="'/Home/Template/header'"></div>
+    <div ui-view></div>
+    <div ng-include="'/Home/Template/footer'"></div> 
+    @* -------footer-------*@   
+</body>
+</html>
+<script src="@Url.Content("~/Scripts/jquery.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap-image-gallery.min.js")"></script>
+<script src="@Url.Content("~/Scripts/blueimp-gallery.min.js")"></script>
+<script src="@Url.Content("~/Scripts/google-api.js")"></script>
+<script src="@Url.Content("~/Scripts/angular.min.js")"></script>
+<script src="@Url.Content("~/Scripts/angular-ui-router.min.js")"></script>
+<script src="@Url.Content("~/Scripts/Apartment.js")"></script>
+<script src="@Url.Content("~/Scripts/Services/ApartmentService.js")"></script>
+<script src="@Url.Content("~/Scripts/Directives/ApartmentDirective.js")"></script>
+<script src="@Url.Content("~/Scripts/Controllers/main.js")"></script>
+<script>
+    $modal.open({
+        backdrop: 'static',
+        keyboard: false
+    }); 
+</script>

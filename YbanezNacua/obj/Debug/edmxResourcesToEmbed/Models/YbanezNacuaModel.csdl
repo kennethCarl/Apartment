@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApartmentModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact_Form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emailaddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phoneno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="messages" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="feedback1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="feedback_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emailaddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contactno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="registration_date" Type="DateTime" Precision="3" />
+    <Property Name="generatedCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="isActivate" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ApartmentEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contact_Form" EntityType="Self.Contact_Form" />
+    <EntitySet Name="Feedbacks" EntityType="Self.Feedback" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>

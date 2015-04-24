@@ -1,0 +1,84 @@
+﻿<div ng-controller="ContactController">
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr />
+                    <h2 class="intro-text text-center">
+                        Contact
+                        <strong>Us</strong>
+                    </h2>
+                    <hr />
+                </div>
+                <div class="col-md-7">
+                    <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m25!1m8!1m3!1d31405.07976268829!2d123.975182!3d10.290967!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e6!4m5!1s0x33a999f889a9b439%3A0x843de0a771252237!2sMactan+Doctors+Hospital%2C+Maximo+V.+Patalinghug+Jr.+Avenue%2C+Lapu-Lapu+City%2C+Cebu%2C+Philippines!3m2!1d10.289838999999999!2d123.966808!4m5!1s0x33a9975088ac7147%3A0x422ac566c21b24f7!2sPajac+Primary+School%2C+34-C+Fuentes+Road%2C+Pajac%2C+Lapu-Lapu+City%2C+6015+Cebu%2C+Philippines!3m2!1d10.296151!2d123.98302899999999!5e0!3m2!1sen!2sph!4v1426212458305" frameborder="0" height="400" width="100%"></iframe>
+                </div>
+                <div class="col-md-5">
+                    <p><strong>Phone Number:</strong> <i>09434364318/495-1474</i></p>
+                    <p><strong>Email Address:</strong> <i>YbanezNacuaApartment@gmail.com</i></p>
+                    <p><strong>Address:</strong> <i>In front of Pajac Primary School, Fuentes Street Pajac Kabaloy, Lapu-Lapu City, Cebu</i></p>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr />
+                    <h2 class="intro-text text-center">CONTACT FORM</h2>
+                    <hr />
+                    <p>For more details, pls fill-up our contact form and we will surely contact you as soon as possible.</p>
+                    <div class="row">
+                        <form id="contactForm" ng-submit="sendContactForm(information)">
+                            <div class="form-group col-lg-4">
+                                <label>Name/Alias</label>
+                                <input class="form-control"
+                                       type="text"
+                                       name="name"
+                                       ng-model="information.name"
+                                       placeholder="Name/Alias(at least 4 letters long)"
+                                       pattern=".{4,50}"
+                                       required>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input class="form-control"
+                                       type="email"
+                                       name="emailaddress"
+                                       ng-model="information.emailaddress"
+                                       pattern=".{0,50}"
+                                       placeholder="Email Address">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Phone Number</label>
+                                <input class="form-control"
+                                       type="tel"
+                                       name="phoneno"
+                                       ng-model="information.phoneno"
+                                       placeholder="Phone Number(at least 7 digits long)"
+                                       pattern=".{7,11}"
+                                       required>
+                            </div>
+                            <div class="clear-fix"></div>
+                            <div class="form-group col-lg-12">
+                                <label>Message or Inquiries</label>
+                                <textarea class="form-control"
+                                          rows="6"
+                                          name="messages"
+                                          ng-model="information.messages"
+                                          placeholder="Please type here..."
+                                          required></textarea>
+                            </div>
+                        </form>
+                        <div class="form-group col-lg-12">
+                            <input class="btn btn-success" type="submit" value="Submit" form="contactForm" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div info-modal visible="showMessage"></div>
+    <div info-large-modal visible="showLargeMessage"></div>
+    <div loading-modal visible="showLoading"></div>
+</div>

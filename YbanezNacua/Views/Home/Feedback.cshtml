@@ -1,0 +1,48 @@
+﻿<div ng-controller="FeedbackController">
+    <div id="getFeedBackButton" ng-click="getFeedback(); $event.stopPropagation();">
+    </div>
+    <div class="container">
+        <div class="box">
+            <hr />
+            <h2 class="intro-text text-center">GIVE US FEEDBACK</h2>
+            <hr />
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <form id="feedbackForm" ng-submit="sendFeedbackForm(data)">
+                        <strong>Leave a feedback...</strong>
+                        <textarea class="form-control"
+                                  rows="3"
+                                  name="feedback1"
+                                  ng-model="data.feedback1"
+                                  placeholder="Please type your feedback here..."
+                                  required></textarea>
+                    </form>
+                    <br>
+                    <input class="btn btn-success" type="submit" value="Submit" form="feedbackForm" />
+                </div>
+            </div>
+            <div>
+            </div>
+            <div class="row">
+                <div id="feedbackcount">
+                    <div class='form-group col-lg-12' style='border-bottom:solid 1px; border-top: solid 1px; padding-top: 10px; padding-bottom: 10px;'>
+                        <h3 style='text-transform:capitalize;'> 0 Feedback(s)</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="feedbackrepeat">
+                </div>
+                <div id="feedbackshowmore">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                    <a style="cursor:pointer" ng-click="showMoreFeedbacks()"><strong>Show more feedbacks...</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div info-modal visible="showMessage"></div>
+    <div loading-modal visible="showLoading"></div>
+</div>
