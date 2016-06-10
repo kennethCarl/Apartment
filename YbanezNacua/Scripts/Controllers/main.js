@@ -189,6 +189,9 @@ function ApartmentController($scope, $interval, $filter, restAPI) {
     $scope.showForgotPassword = false;
     $scope.showForgotActivatorCode = false;
     $scope.ip = "";
+    $scope.currentPage = 1;
+
+    $scope.pageSize = 10;
 
     $scope.showLoginForm = function () {
         $scope.message = ""
@@ -567,7 +570,14 @@ function ApartmentController($scope, $interval, $filter, restAPI) {
             $("div[style='margin: 0px; padding: 0px; left: 0px; width: 100%; height: 65px; right: 0px; bottom: 0px; display: block; position: fixed; z-index: 2147483647; opacity: 0.9; background-color: rgb(32, 32, 32);']").remove();
             $("div[style='height: 65px;']").remove();
             $("div[onmouseover='S_ssac();']").remove();
-            $("center").remove();
+            $("center").remove(".ng-scope");
+            var element = document.getElementsByTagName("center");
+            for (var index = element.length - 1; index >= 0; index--) {
+                if (element[index].outerHTML == '<center><a href="http://somee.com">Web hosting by Somee.com</a></center>') {
+                    console.log(element[index]);
+                    element[index].innerHTML = "";
+                }
+            }
         });
     }, 1000);
 };

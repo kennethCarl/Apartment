@@ -76,7 +76,7 @@
           <Property Name="isActivate" Type="Int32" />
           <Property Name="generatedCode" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="ApartmentEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ApartmentEntities" annotation:LazyLoadingEnabled="false">
           <EntitySet Name="Feedbacks" EntityType="Self.Feedback" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="Contact_Form" EntityType="ApartmentModel.Contact_Form" />

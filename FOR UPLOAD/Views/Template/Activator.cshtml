@@ -1,0 +1,55 @@
+﻿<div class="modal fade" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" style="width:500px;padding-left:60px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="col-md-2 glyphicon glyphicon-info-sign"></div>
+                    <div class="col-md-10"><h6 class="modal-title"><strong>Nacua-Ybanez Aparment</strong></h6></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="ActivatorForm"
+                      ng-submit="SendActivator(information)">
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            Please activate your account by providing the details below, use the code that we send to your email account.
+                        </div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="row">
+                        <div class="col-lg-12 error-message">{{message}}</div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label>Username</label>
+                            <input class="form-control"
+                                   type="text" name="username"
+                                   ng-model="information.username"
+                                   placeholder="Please input Username here..."
+                                   pattern=".{4,50}"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label>Code</label>
+                            <input class="form-control"
+                                   type="text"
+                                   name="activator"
+                                   ng-model="information.activator"
+                                   pattern=".{0,5}"
+                                   placeholder="Please input activator code here..."
+                                   required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input class="btn btn-success" type="submit" value="Activate" form="ActivatorForm" />
+            </div>
+        </div>
+    </div>
+</div>

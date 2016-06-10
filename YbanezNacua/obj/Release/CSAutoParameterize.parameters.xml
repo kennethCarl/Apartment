@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ApartmentEntities-Web.config Connection String" description="ApartmentEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.ApartmentModel.csdl|res://*/Models.ApartmentModel.ssdl|res://*/Models.ApartmentModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=(local);Initial Catalog=Apartment;User ID=iefastrakuser;Password=maldito&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Carl\\Projects\\Personal\\YbanezNacua\\YbanezNacua\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ApartmentEntities']/@connectionString" />
+  </parameter>
+</parameters>

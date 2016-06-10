@@ -150,6 +150,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controllers\main.js" />
     <Content Include="Scripts\Directives\ApartmentDirective.js" />
+    <Content Include="Scripts\dirPagination.js" />
     <Content Include="Scripts\google-api.js" />
     <EntityDeploy Include="Models\ApartmentModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -168,6 +169,11 @@
       <DependentUpon>ApartmentModel.edmx</DependentUpon>
       <LastGenOutput>ApartmentModel.cs</LastGenOutput>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\ybaneznacua.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -186,6 +192,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\Services\ApartmentService.js" />
+    <Content Include="Views\Template\dirPagination.tpl.html" />
     <Content Include="Web.config" />
     <Content Include="Views\Footer.cshtml" />
     <Content Include="Views\Header.cshtml" />
@@ -245,10 +252,6 @@
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Template\Message.cshtml" />
     <Content Include="Views\Template\Login.cshtml" />
     <Content Include="Views\Template\Signup.cshtml" />
@@ -259,6 +262,7 @@
     <Content Include="Views\Template\Loading.cshtml" />
     <Content Include="Views\Template\ForgotActivatorCode.cshtml" />
     <Content Include="Views\Template\ForgotPassword.cshtml" />
+    <Content Include="Views\Template\Pagination.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

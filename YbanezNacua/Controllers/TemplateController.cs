@@ -49,5 +49,9 @@ namespace YbanezNacua.Controllers
         {
             return View();
         }
+        public ActionResult Pagination()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApartmentModelStoreContainer" CdmEntityContainer="ApartmentEntities">
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="ApartmentModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="feedback1" ColumnName="feedback" />
+          <ScalarProperty Name="feedback_date" ColumnName="feedback_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ApartmentModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="generatedCode" ColumnName="generatedCode" />
+          <ScalarProperty Name="isActivate" ColumnName="isActivate" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="registration_date" ColumnName="registration_date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Form">
+      <EntityTypeMapping TypeName="ApartmentModel.Contact_Form">
+        <MappingFragment StoreEntitySet="Contact_Form">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="messages" ColumnName="messages" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="emailaddress" ColumnName="emailaddress" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visiteds">
+      <EntityTypeMapping TypeName="ApartmentModel.Visited">
+        <MappingFragment StoreEntitySet="Visited">
+          <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

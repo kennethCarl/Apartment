@@ -57,4 +57,3 @@ D:\Carl\Projects\Personal\YbanezNacua\YbanezNacua\bin\System.Web.Http.xml
 D:\Carl\Projects\Personal\YbanezNacua\YbanezNacua\bin\System.Web.Http.WebHost.xml
 D:\Carl\Projects\Personal\YbanezNacua\YbanezNacua\obj\Debug\YbanezNacua.dll
 D:\Carl\Projects\Personal\YbanezNacua\YbanezNacua\obj\Debug\YbanezNacua.pdb
-D:\Carl\Projects\Personal\YbanezNacua\YbanezNacua\obj\Debug\YbanezNacua.csprojResolveAssemblyReference.cache

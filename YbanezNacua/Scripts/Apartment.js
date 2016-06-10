@@ -1,6 +1,6 @@
 (function(window, angular)
 {
-var app = angular.module('Apartment', ['ui.router']);
+var app = angular.module('Apartment', ['ui.router', 'angularUtils.directives.dirPagination']);
 app.config(function ($stateProvider, $urlRouterProvider) {
     //default view in ui-view
     $urlRouterProvider.otherwise("/Home/Index");

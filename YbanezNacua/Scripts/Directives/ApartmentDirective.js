@@ -12,7 +12,7 @@ var infoModal = function () {
                                     "<button type='button' class='close' ng-click='closeMessage()' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" +
                                     "<div class='row'>" +
                                         "<div class='col-md-2 glyphicon glyphicon-info-sign'></div>" +
-                                        "<div class='col-md-10'><h6 class='modal-title'><strong>Nacua-Ybañez Aparment</strong></h6></div>" +
+                                        "<div class='col-md-10'><h6 class='modal-title'><strong>Nacua-Ybanez Aparment</strong></h6></div>" +
                                     "</div>" +
                                 "</div>" +
                                 "<div class='modal-body'>" +

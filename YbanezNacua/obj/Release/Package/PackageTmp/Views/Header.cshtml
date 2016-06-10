@@ -1,0 +1,59 @@
+﻿<div ng-controller="ApartmentController">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom text-center font-white">
+        <strong>Today is <span time-modal="format"></span></strong>
+        <div id="visitorcount">
+
+        </div>
+    </nav>
+    <div class="brand">
+        Nacua-Ybañez Apartment
+    </div>
+    <div class="address-bar">
+        Fuentes Street Pajac Kabaloy, Lapu-Lapu City, Cebu
+    </div>
+    <!--Navigation-->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toogle get grouped for better mobile display-->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--navbar-brand is hidden on larger screens, but visible when the menu is collapsed-->
+                <a ui-sref="Home" class="navbar-brand">Nacua-Ybañez</a>
+            </div>
+            <!--Collect the nav links, forms, and other content for toggling-->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="Home" class="glyphicon glyphicon-home">&nbsp;HOME</a></li>
+                    <li><a ui-sref="About" class="glyphicon glyphicon-picture">&nbsp;ABOUT</a></li>
+                    <li><a ui-sref="Contact" class="glyphicon glyphicon-earphone">&nbsp;CONTACT</a></li>
+                    <li><a ui-sref="Feedback" class="glyphicon glyphicon-pencil">&nbsp;FEEDBACK</a></li>
+                    <li ng-show="!showUserName"><a ng-click="showLoginForm()" style="cursor:pointer;" class="glyphicon glyphicon-log-in">&nbsp;LOGIN</a></li>
+                    <li class="dropdown" ng-show="showUserName">
+                        <a class=" glyphicon glyphicon-user" id="usermenu" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{userNameHolder | limitTo:5}}...<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a ui-sref="Home">{{userNameHolder}}</a></li>
+                            <li><a href="" ng-click="showChangePasswordForm()">Change Password</a></li>
+                            <li><a href="" ng-click="logoutRequest()">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div login-modal visible="showLogin"></div>
+    <div sign-up-modal visible="showSignup"></div>
+    <div change-password visible="showChangePassword"></div>
+    <div forgot-activator-code visible="showForgotActivatorCode"></div>
+    <div forgot-password visible="showForgotPassword"></div>
+    <div activator-modal visible="showActivator"></div>
+    <div info-modal visible="showMessage"></div>
+    <div info-large-modal visible="showLargeMessage"></div>
+    <div loading-modal visible="showLoading"></div>
+</div>

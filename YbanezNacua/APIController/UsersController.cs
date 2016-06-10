@@ -98,8 +98,8 @@ namespace YbanezNacua.APIController
                     try
                     {
                         //send email
-                        GMailer.GmailUsername = "YbanezNacuaApartment@gmail.com";
-                        GMailer.GmailPassword = "arjocamahamage";
+                        GMailer.GmailUsername = "smilefairies2015@gmail.com";
+                        GMailer.GmailPassword = "123smile";
 
                         GMailer mailer = new GMailer();
                         foreach (User u in searchEmail)

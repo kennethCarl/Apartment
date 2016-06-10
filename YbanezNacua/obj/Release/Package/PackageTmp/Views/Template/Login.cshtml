@@ -1,0 +1,60 @@
+﻿<div class="modal fade" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" style="width:500px;padding-left:60px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="col-md-10"><h4 class="modal-title">Login Form</h4></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 error-message">{{message}}</div>
+                </div>
+                <div class="clear-fix"></div>
+                <form id="LoginForm" ng-submit="loginRequest(information)">
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label>Username</label>
+                            <input class="form-control"
+                                   type="text" name="username"
+                                   ng-model="information.username"
+                                   placeholder="Please input username here..."
+                                   pattern=".{4,50}"
+                                   required>
+
+                        </div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label>Password</label>
+                            <input class="form-control"
+                                   type="password"
+                                   name="password"
+                                   ng-model="information.password"
+                                   placeholder="Please input password here..."
+                                   pattern=".{0,50}"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="clear-fix"></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input class="btn btn-success" type="submit" value="Login" form="LoginForm" />
+                        <div class="btn btn-danger " ng-click="closeLoginForm()">Cancel</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        Forgot Password?<i><a href="" ng-click="showForgotPasswordForm()">Click Here.</a></i><br>
+                        Don't have an account yet?<i><a href="" ng-click="showSignupForm()">Click Here.</a></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

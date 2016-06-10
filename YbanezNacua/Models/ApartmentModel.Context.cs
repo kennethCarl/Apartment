@@ -18,6 +18,7 @@ namespace YbanezNacua.Models
         public ApartmentEntities()
             : base("name=ApartmentEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
